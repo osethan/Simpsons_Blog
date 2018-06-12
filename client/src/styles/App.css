@@ -1,0 +1,98 @@
+body {
+  background-color: lightblue;
+  font-family: Courier New;
+}
+
+.content-container {
+  background-color: lightyellow;
+  border-style: solid;
+  border-width: medium;
+  border-color: black;
+  border-radius: 24px;
+}
+
+.character-container {
+  width: 576px;
+}
+
+.maker-container {
+  width: 736px;
+}
+
+.crew-inline {
+  dispaly: inline;
+}
+
+.crew-stack {
+  display: none;
+}
+
+.not-found {
+  width: 380px;
+}
+
+.comment-button {
+  background-color: lightgrey;
+  border-style: solid;
+  border-width: medium;
+  border-color: black;
+  border-radius: 24px;
+  font-size: 24px;
+}
+
+.header-button {
+  background-color: lightgrey;
+  border-style: solid;
+  border-width: medium;
+  border-color: black;
+  border-radius: 24px;
+}
+
+.comment-input {
+  background-color: white;
+  border-style: solid;
+  border-width: medium;
+  border-color: black;
+  border-radius: 24px;
+  font-size: 24px;
+}
+
+.comment-box-inline {
+  display: inline;
+}
+
+.comment-box-stack {
+  display: none;
+}
+
+/*** Mobile Layout ***/
+
+@media only screen and (max-width: 767px) {
+  .not-found {
+    width: 100%;
+  }
+
+  .character-container {
+    width: 100%;
+  }
+
+  .maker-container {
+    width: 100%;
+  }
+
+  .crew-inline {
+    display: none;
+  }
+
+  .crew-stack {
+    display: block;
+  }
+
+  .comment-box-inline {
+    display: none;
+  }
+
+  .comment-box-stack {
+    display: block;
+  }
+}

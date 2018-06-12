@@ -1,0 +1,27 @@
+version: "2"
+services:
+  web:
+    image: osethan/blog-frontend
+    ports:
+      - "3000:3000"
+  app:
+    image: osethan/blog-backend
+    ports:
+      - "3030:3030"
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=blog
+    links:
+      - mysql
+      - redis
+  mysql:
+    image: osethan/blog-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=blog
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
